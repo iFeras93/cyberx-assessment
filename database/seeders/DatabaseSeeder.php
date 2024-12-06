@@ -27,10 +27,10 @@ class DatabaseSeeder extends Seeder
 
         User::factory(10)->create()->each(function ($user) {
             // Create assessments for each user
-            Assessment::factory(3)->create(['user_id' => $user->id]);
+            Assessment::factory(5)->create(['user_id' => $user->id]);
 
             // Create surveys for each user
-            Survey::factory(2)->create(['user_id' => $user->id]);
+            Survey::factory(8)->create(['user_id' => $user->id]);
 
             // Create tasks for each user
             Task::factory(5)->create(['user_id' => $user->id]);
